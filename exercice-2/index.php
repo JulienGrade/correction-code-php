@@ -9,7 +9,15 @@
 </head>
 <body>
 <?php
-$alea = mt_rand(0,20);
+
+use Random\RandomException;
+
+try {
+    $alea = random_int(0, 20);
+} catch (RandomException $e) {
+    echo $e->getMessage();
+}
+
 echo "Nombre : ". $alea. "<br/>";
 if($alea<7){
     echo "Bonjour";

@@ -73,11 +73,13 @@ if (!empty($_GET['choix'])) {
     }
 }
 
-function retourneAireCercle($rayon) {
+function retourneAireCercle($rayon): float|int
+{
     return $rayon * $rayon * M_PI;
 }
 
-function retournePerimetreCercle($rayon) {
+function retournePerimetreCercle($rayon): float|int
+{
     return 2 * $rayon * M_PI;
 }
 ?>

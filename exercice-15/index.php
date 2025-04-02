@@ -87,7 +87,8 @@ if (!empty($_POST['login']) && !empty($_POST['password']) && !empty($_POST['role
 /**
  * Fonction permettant d'afficher des utilisateurs
  */
-function afficherDesUtilisateurs($utilisateurs) {
+function afficherDesUtilisateurs($utilisateurs): void
+{
     foreach ($utilisateurs as $utilisateur) {
         afficherUnUtilisateur($utilisateur);
     }
@@ -96,7 +97,8 @@ function afficherDesUtilisateurs($utilisateurs) {
 /**
  * Fonction permettant d'afficher un utilisateur
  */
-function afficherUnUtilisateur($unUser) {
+function afficherUnUtilisateur($unUser): void
+{
     echo "**************************<br />";
     echo "******** DEBUT AFFICHAGE ********<br />";
     echo "Login de l'utilisateur : " . $unUser[0] . "<br />";

@@ -48,9 +48,7 @@
 
 <form action="" method="GET">
     <label for="nombre">Nombre :</label>
-    <label>
-        <input type="text" name="nombre" required />
-    </label>
+        <input id="nombre" type="text" name="nombre" required />
     <input type="submit" value="Valider">
 </form>
 
@@ -69,7 +67,8 @@ if (!empty($_GET['nombre'])) {
     echo "<br /><hr>";
 }
 
-function factorielleVersionBoucle($factorielle) {
+function factorielleVersionBoucle($factorielle): int
+{
     $resultat = 1;
     for ($i = 1; $i <= $factorielle; $i++) {
         $resultat *= $i;
@@ -77,7 +76,8 @@ function factorielleVersionBoucle($factorielle) {
     return $resultat;
 }
 
-function factorielleVersionRecursive($factorielle) {
+function factorielleVersionRecursive($factorielle): float|int
+{
     if ($factorielle <= 1) {
         return 1;
     }

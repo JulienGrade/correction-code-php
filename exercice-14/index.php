@@ -13,7 +13,8 @@ afficherDesUtilisateurs($listeUtilisateurs);
  *          contenant une liste d'utilisateurs
  * Sortie : aucun
  */
-function afficherDesUtilisateurs($utilisateurs) {
+function afficherDesUtilisateurs($utilisateurs): void
+{
     for ($i = 0; $i < sizeof($utilisateurs); $i++) {
         afficherUnUtilisateur($utilisateurs[$i]);
     }
@@ -25,7 +26,8 @@ function afficherDesUtilisateurs($utilisateurs) {
  *          Indice 0 : login - 1 : mot de passe - 2 : rôle
  * Sortie : aucun
  */
-function afficherUnUtilisateur($unUser) {
+function afficherUnUtilisateur($unUser): void
+{
     echo "**************************<br />";
     echo "******** DEBUT AFFICHAGE ********<br />";
     echo "Login de l'utilisateur : " . $unUser[0] . "<br />";

@@ -92,7 +92,8 @@ if (!empty($_GET['login']) && !empty($_GET['mdp'])) {
     }
 }
 
-function estConnecte($utilisateurs, $login, $password) {
+function estConnecte($utilisateurs, $login, $password):mixed
+{
     foreach ($utilisateurs as $iValue) {
         if ($login === $iValue[0] && $password === $iValue[1]) {
             return $iValue[2]; // Retourne le rôle

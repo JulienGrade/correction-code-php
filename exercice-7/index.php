@@ -1,11 +1,11 @@
 <?php
 
-function estBissextile($annee)
+function estBissextile($annee): bool
 {
     return ($annee % 4 === 0 && $annee % 100 !== 0) || $annee % 400 === 0;
 }
 
-function affichageAnneeBissextile($annee)
+function affichageAnneeBissextile($annee): void
 {
     $msg = $annee . " est une année ";
     if (!estBissextile($annee)) {

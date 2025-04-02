@@ -76,13 +76,9 @@ if (!empty($_GET['login']) && !empty($_GET['mdp'])) {
     }
 }
 
-function estConnecte($utilisateurs, $login, $password) {
-    foreach ($utilisateurs as $iValue) {
-        if ($login === $iValue[0] && $password === $iValue[1]) {
-            return true;
-        }
-    }
-    return false;
+function estConnecte($utilisateurs, $login, $password): bool
+{
+    return array_any($utilisateurs, fn($iValue) => $login === $iValue[0] && $password === $iValue[1]);
 }
 ?>
 </body>

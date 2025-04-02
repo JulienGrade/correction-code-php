@@ -14,6 +14,16 @@ const TVA = 20;
 $prixHT=10;
 echo "Voici le prix : <br/>";
 echo $prixHT." € H.T - ".($prixHT * TVA /100 + $prixHT). " € T.T.C";
+
+// Fonction avec typage des paramètres et du retour
+function calculerPrixTTC(float $prixHT): float {
+    return $prixHT * (1 + TVA / 100);
+}
+
+$prixHT = 10.0;
+
+echo "Voici le prix : <br/>";
+echo $prixHT . " € H.T - " . calculerPrixTTC($prixHT) . " € T.T.C";
 ?>
 </body>
 </html>
